@@ -19,6 +19,7 @@ Here, we present the bioinformatics workflow used to process and analyze the res
 ---
 **Tools**
 
+- **bash, conda** - workflow/environment control
 - **fastp** - adaptor and low quality reads removal.
 - **multiQC** - assess sequencing quality.
 - **bowtie2** - sequence mapping to reference genome.
