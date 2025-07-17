@@ -23,5 +23,6 @@ Note: Raw sequencing data processing (adapter trimming with fastp, sequence mapp
 
 - **bash, conda** - workflow/environment control
 - **samtools** - sample quality check.
-- **bamPEFragmentSize** - fragment size distribution and conversion to .bigwig.
+- **bamPEFragmentSize** - fragment size distribution.
+- **bamCoverage** - conversion to BigWig
 - **MACS2** - peak calling
