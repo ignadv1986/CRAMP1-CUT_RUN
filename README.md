@@ -9,18 +9,20 @@ The experimental procedures are detailed in [this publication](https://www.scien
 
 Here, we present the bioinformatics workflow used to process and analyze the resulting sequencing data, highlighting key quality control steps, peak calling, and downstream interpretation.
 
+---
 **Goals**
 
 - Identify and characterize CRAMP1 binding sites in human genome.
 - Perform quality control and peak analysis.
 - Visualize and interpret peaks.
 
+---
 **Tools**
 
-- "fastp" - adaptor and low quality reads removal.
-- "multiQC" - assess sequencing quality.
-- "bowtie" - sequence mapping to reference genome.
-- "markduplicates" - removal of duplicated sequences.
-- "samtools" - sample quality check.
-- "bamtool" - fragment size distribution and conversion to .bigwig.
-- "macs2" - peak calling
+- **fastp** - adaptor and low quality reads removal.
+- **multiQC** - assess sequencing quality.
+- **bowtie2** - sequence mapping to reference genome.
+- **Picard MarkDuplicates** - removal of duplicated sequences.
+- **samtools** - sample quality check.
+- **bamPEFragmentSize** - fragment size distribution and conversion to .bigwig.
+- **MACS2** - peak calling
