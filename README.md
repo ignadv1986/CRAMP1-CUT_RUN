@@ -9,6 +9,8 @@ The experimental procedures are detailed in [this publication](https://www.scien
 
 Here, we present the bioinformatics workflow used to process and analyze the resulting sequencing data, highlighting key quality control steps, peak calling, and downstream interpretation.
 
+Note: Raw sequencing data processing (adapter trimming with fastp, sequence mapping with bowtie2 and removal of duplicated sequences with Picard MarkDuplicates) was performed by the sequencing facility using standard pipelines. This portfolio focuses on the subsequent steps starting with BAM files.
+
 ---
 **Goals**
 
@@ -20,10 +22,6 @@ Here, we present the bioinformatics workflow used to process and analyze the res
 **Tools**
 
 - **bash, conda** - workflow/environment control
-- **fastp** - adaptor and low quality reads removal.
-- **multiQC** - assess sequencing quality.
-- **bowtie2** - sequence mapping to reference genome.
-- **Picard MarkDuplicates** - removal of duplicated sequences.
 - **samtools** - sample quality check.
 - **bamPEFragmentSize** - fragment size distribution and conversion to .bigwig.
 - **MACS2** - peak calling
