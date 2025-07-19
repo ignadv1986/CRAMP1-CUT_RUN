@@ -27,7 +27,7 @@ Through CRISPR/Cas9 screens, we identified the previously uncharacterized protei
 ## Tools
 
 - **bash, conda** - workflow/environment control.
-- **bowtiw2** - sequence alignment.
+- **bowtie2** - sequence alignment.
 - **samtools** - sample quality check.
 - **bamPEFragmentSize** - fragment size distribution.
 - **bamCoverage** - conversion to BigWig.
