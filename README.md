@@ -19,10 +19,10 @@ Through CRISPR/Cas9 screens, we identified the previously uncharacterized protei
 ---
 ## Goals
 
-- Identify and characterize CRAMP1 binding sites in human genome.
-- Perform quality control and peak analysis.
+- Perform quality control and peak analysis of CUT&RUN data.
 - Visualize and interpret peaks.
-
+- Determine CRAMP1 ability to bind the promoters of histone H1 genes.
+- Assess differences between WT and mutant proteins. 
 ---
 ## Tools
 
