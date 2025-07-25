@@ -32,3 +32,6 @@ Through CRISPR/Cas9 screens, we identified the previously uncharacterized protei
 - **bamPEFragmentSize** - fragment size distribution.
 - **bamCoverage** - conversion to BigWig.
 - **MACS2** - peak calling.
+---
+## Workflow
+1. **Map reads to spike-in DNA** Mapping of .bam files to Saccharomyces cerevisae DNA using bowtie2.
