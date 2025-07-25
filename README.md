@@ -34,4 +34,8 @@ Through CRISPR/Cas9 screens, we identified the previously uncharacterized protei
 - **MACS2** - peak calling.
 ---
 ## Workflow
-1. **Map reads to spike-in DNA** Mapping of .bam files to Saccharomyces cerevisae DNA using bowtie2.
+1. **Map reads to spike-in DNA** Mapping of .bam files to Saccharomyces cerevisae DNA using bowtie2. Calculate scaling factors (max yeast reads)/(sample yeast reads)
+2. **Sample quality evaluation** Evaluate the quality of the samples after mapping to human genome using samtools in a conda environment.
+3. **Fragment size determination** Using bamtools to confirm the right sized of the sequenced fragments.
+4. 
+5. 
