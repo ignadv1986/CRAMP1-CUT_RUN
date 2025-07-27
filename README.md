@@ -37,5 +37,6 @@ Through CRISPR/Cas9 screens, we identified the previously uncharacterized protei
 1. **Map reads to spike-in DNA** Mapping of .bam files to Saccharomyces cerevisae DNA using bowtie2. Calculate scaling factors (max yeast reads)/(sample yeast reads)
 2. **Sample quality evaluation** Evaluate the quality of the samples after mapping to human genome using samtools in a conda environment.
 3. **Fragment size determination** Using bamtools to confirm the right sized of the sequenced fragments.
-4. 
-5. 
+4. **Normalization of samples** Using deeptols and the previously calculated scaling factor, rendering bigwig files.
+5. **bigwig to bedgraph conversion** Use ucsc-bigwigtobedgraph to generate the bedgraph files.
+6. **Normalization to control**: Run the samples together with controls through SEACR
