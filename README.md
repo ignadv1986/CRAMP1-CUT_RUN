@@ -30,13 +30,17 @@ Through CRISPR/Cas9 screens, we identified the previously uncharacterized protei
 - **bowtie2** - sequence alignment.
 - **samtools** - sample quality check.
 - **bamPEFragmentSize** - fragment size distribution.
-- **bamCoverage** - conversion to BigWig.
+- **bedtools** - .bedgraph files generation.
+- **USCS-bigWIgtobedGraph** - conversion of .bedgraph files into .bw.
+- **multiBigWigSummary** - assess replicate correlation.
 - **MACS2** - peak calling.
 ---
 ## Workflow
-1. **Map reads to spike-in DNA** Mapping of .bam files to Saccharomyces cerevisae DNA using bowtie2. Calculate scaling factors (max yeast reads)/(sample yeast reads)
-2. **Sample quality evaluation** Evaluate the quality of the samples after mapping to human genome using samtools in a conda environment.
-3. **Fragment size determination** Using bamtools to confirm the right sized of the sequenced fragments.
-4. **Normalization of samples** Using deeptols and the previously calculated scaling factor, rendering bigwig files.
-5. **bigwig to bedgraph conversion** Use ucsc-bigwigtobedgraph to generate the bedgraph files.
-6. **Normalization to control**: Run the samples together with controls through SEACR
+1. **Sample quality evaluation** Evaluate the quality of the samples after mapping to human genome using samtools in a conda environment.
+2. **Fragment size determination** Using bamtools to confirm the right sized of the sequenced fragments.
+3. **Map reads to spike-in DNA** Mapping of .bam files to Saccharomyces cerevisae DNA using bowtie2. Calculate scaling factors (max yeast reads)/(sample yeast reads).
+4. **Filter .bam files** Generation of clean .bam files with reads corresponding to autosomes and sexual chromosomes using samtools.
+5. **Generation of bedgraph files** Using bedtols on the .bam files with the previously calculated scaling factor.
+8. **bedgraph to bigwig conversion** Use ucsc-bigwigtobedgraph to generate the bigwig files.
+9. **Assesment of replicate correlation** Generate correlation files for replicates of all samples using multiBigWigSummary. 
+10. **Normalization to control**: Run the samples together with controls through SEACR.
