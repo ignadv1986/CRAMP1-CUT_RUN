@@ -38,9 +38,9 @@ Through CRISPR/Cas9 screens, we identified the previously uncharacterized protei
 ## Workflow
 1. **Sample quality evaluation** Evaluate the quality of the samples after mapping to human genome using samtools in a conda environment.
 2. **Fragment size determination** Using bamtools to confirm the right sized of the sequenced fragments.
-3. **Map reads to spike-in DNA** Mapping of .bam files to Saccharomyces cerevisae DNA using bowtie2. Calculate scaling factors (max yeast reads)/(sample yeast reads).
-4. **Filter .bam files** Generation of clean .bam files with reads corresponding to autosomes and sexual chromosomes using samtools.
-5. **Generation of bedgraph files** Using bedtols on the .bam files with the previously calculated scaling factor.
-8. **bedgraph to bigwig conversion** Use ucsc-bigwigtobedgraph to generate the bigwig files.
-9. **Assesment of replicate correlation** Generate correlation files for replicates of all samples using multiBigWigSummary. 
-10. **Normalization to control**: Run the samples together with controls through SEACR.
+3. **Map reads to spike-in DNA** Mapping of .bam files to *Saccharomyces cerevisae* DNA using bowtie2. Calculate scaling factors (max yeast reads)/(sample yeast reads).
+4. **Generation of bedgraph files** Using bedtols on the .bam files with the previously calculated scaling factor.
+5. **bedgraph to bigwig conversion** Use ucsc-bigwigtobedgraph to generate the bigwig files.
+6. **Assesment of replicate correlation** Generate correlation files for replicates of all samples using multiBigWigSummary. 
+7. **Normalization to control**: Run the samples together with controls through SEACR.
+8. **Filter .bam files** Generation of clean .bam files with reads corresponding to autosomes and sexual chromosomes using samtools.
