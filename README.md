@@ -51,11 +51,19 @@ Through CRISPR/Cas9 screens, we identified the previously uncharacterized protei
 - BedGraph files were generated from BAMs with spike-in scaling applied.
 - BedGraph files were converted to BigWig format.
 - BigWig files were normalized to negative control samples using deepTools’ bigwigCompare to highlight specific signal over background.
-6. **Replicate Assessment**
-- Replicate concordance was evaluated using deepTools (multiBigwigSummary and plotCorrelation) on normalized BigWig files.
-7. **Peak Calling and Intersection Analysis**
+6. **Peak Calling and Intersection Analysis**
 - Peaks were called on both merged replicates and individual samples using MACS2.
 - Unique and shared peaks between conditions were identified using bedtools intersect.
+7. **Replicate Assessment**
+- Replicate concordance was evaluated using deepTools (multiBigwigSummary and plotCorrelation) on normalized BigWig files.
 8. **Binding Profile Analysis at Regions of Interest**
 - Binding at transcription start sites (TSS) was quantified using deepTools’ computeMatrix with reference to TSS.
 - Profiles were plotted with plotProfile to compare binding patterns across different gene subsets.
+## Results
+1) Sample quality assessment
+Quality assessment performed on pre-processed BAM files (after adapter trimming, quality filtering, and duplicate removal) showed exceptionally high alignment rates, with 100% of reads mapped and properly paired. No duplicates or secondary alignments were detected, confirming the efficacy of the preprocessing steps and the high quality of the final dataset for analysis.
+2) Fragment size distribution analysis
+Fragment size distribution analysis revealed a predominant enrichment of short DNA fragments, mostly between 30 and 150 bp, consistent with the expected cleavage pattern in CUT&RUN assays. The presence of a strong peak around 50-60 bp suggests efficient targeting of sub-nucleosomal regions, supporting the high specificity and quality of the sample preparation.
+3) SeqMonk visualization
+Initial assessment of mapped reads in SeqMonk provided a quick quality check and overview of the data distribution across the genome, confirming CRAMP1´s DNA-binding.
+4) Intersection analysis between WT and CRAMP1 mutants
