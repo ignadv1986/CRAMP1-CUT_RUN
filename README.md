@@ -28,18 +28,34 @@ Through CRISPR/Cas9 screens, we identified the previously uncharacterized protei
 
 - **bash, conda** - workflow/environment control.
 - **bowtie2** - sequence alignment.
-- **samtools** - sample quality check.
+- **samTools** - sample quality check.
 - **bamPEFragmentSize** - fragment size distribution.
 - **bedtools** - .bedgraph files generation.
+- **deepTools** (bigwigCompare, multiBigwigSummary, plotCorrelation, computeMatrix, plotProfile, multiBigWigSummary)
 - **USCS-bigWIgtobedGraph** - conversion of .bedgraph files into .bw.
-- **multiBigWigSummary** - assess replicate correlation.
 - **MACS2** - peak calling.
+- **SeqMonk** - track visualization.
 ---
 ## Workflow
-1. **Sample quality evaluation** Evaluate the quality of the samples after mapping to human genome using samtools in a conda environment.
-2. **Fragment size determination** Using bamtools to confirm the right size of the sequenced fragments.
-3. **Map reads to spike-in DNA** Mapping of .bam files to *Saccharomyces cerevisae* DNA using bowtie2. Calculate scaling factors (max yeast reads)/(sample yeast reads).
-4. **Generation of bedgraph files** Using bedtols on the .bam files with the previously calculated scaling factor.
-5. **bedgraph to bigwig conversion** Use ucsc-bigwigtobedgraph to generate the bigwig files.
-6. **Normalization to control**: Run the samples together with controls through BigWigCompare
-7. **Filter .bam files** Generation of clean .bam files with reads corresponding to autosomes and sexual chromosomes using samtools.
+1. **Sample Quality Assessment**
+- Aligned reads were quality-checked using samtools.
+- Fragment size distributions were confirmed with bamtools to ensure expected CUT&RUN fragment profiles.
+2. **Spike-In Normalization**
+- Sequencing reads were mapped to *Saccharomyces cerevisiae* spike-in DNA using bowtie2.
+- A scaling factor was calculated based on yeast read counts to normalize for technical variation across samples.
+3. **Filtering Reads**
+- Only reads mapping to canonical chromosomes (1–22, X, and Y) were retained for further analysis.
+4. **Visualization and Replicate Assessment**
+- Initial visualization of mapped reads was done in SeqMonk.
+5. **Generation and Normalization of Coverage Tracks**
+- BedGraph files were generated from BAMs with spike-in scaling applied.
+- BedGraph files were converted to BigWig format.
+- BigWig files were normalized to negative control samples using deepTools’ bigwigCompare to highlight specific signal over background.
+6. **Replicate Assessment**
+- Replicate concordance was evaluated using deepTools (multiBigwigSummary and plotCorrelation) on normalized BigWig files.
+7. **Peak Calling and Intersection Analysis**
+- Peaks were called on both merged replicates and individual samples using MACS2.
+- Unique and shared peaks between conditions were identified using bedtools intersect.
+8. **Binding Profile Analysis at Regions of Interest**
+- Binding at transcription start sites (TSS) was quantified using deepTools’ computeMatrix with reference to TSS.
+- Profiles were plotted with plotProfile to compare binding patterns across different gene subsets.
