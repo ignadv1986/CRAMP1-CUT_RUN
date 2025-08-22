@@ -35,7 +35,8 @@ Through CRISPR/Cas9 screens, we identified the previously uncharacterized protei
 - **MACS2** - peak calling.
 - **SeqMonk** - track visualization.
 - **R/Bioconductor** - extraction of genomic coordinates and plotting.
-- **GraphPad Prism** - figure generation.
+- **GraphPad Prism** - graph generation.
+- **Adobe Illustrator** - figure polishing.
 ---
 ## Workflow
 1. **Sample Quality Assessment**
@@ -70,6 +71,6 @@ Initial assessment of mapped reads in SeqMonk provided a quick quality check and
 4) **Correlation analysis**
 Spearman correlation was applied to all replicates. The different replicates of each individual sample showed high correlation (>0.65), while demonstrating big differences between the different conditions, spacially for the D1 mutant.
 5) **Assessment of differences between WT and mutants**
-Peaks in WT samples were clearly enriched in promotor regions, with double the amount of peaks as compared to either SANT or D1 mutants, demonstrating the importance of both domains in CRAMP1´s role as a transcription factor.
+Peaks in WT samples were clearly enriched in promotor regions, with double the amount of peaks as compared to either SANT or D1 mutants, demonstrating the importance of both domains in CRAMP1´s role as a transcription factor. Additionally, most histone loci showed unique peaks in WT as compared to both mutants, with CRAMP1 SANT having a significant reduced peaks at H1 genes.
 6) **Analysis of CRAMP1 enrichment at replication-dependent histones and H1 genes**
 CRAMP1 was highly enriched at H1 genes promoters as compared to both the SANT and the D1 mutants, while only the D1 mutation seemed to show a big impact in the overall recruitment of CRAMP1 to the promoters of replication-dependent histones. 
