@@ -1,0 +1,7 @@
+Sample	TSS_Set	Num_Overlaps	Mean_Score	Median_Score	Total_Score
+CRAMP1_WT_R1_peaks_peaks	H1_TSS	       6	673.667	428	4042
+CRAMP1_WT_R3_peaks_peaks	H1_TSS	       3	966	969	2898
+CRAMP1_SANT_R1_peaks_peaks	H1_TSS	       3	300.667	154	902
+CRAMP1_SANT_R2_peaks_peaks	H1_TSS	       3	324.667	118	974
+CRAMP1_D1_R2_peaks_peaks	H1_TSS	       1	0		0
+CRAMP1_D1_R3_peaks_peaks	H1_TSS	       1	0		0
