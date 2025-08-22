@@ -33,7 +33,7 @@ Through CRISPR/Cas9 screens, we identified the previously uncharacterized protei
 - **bedtools** - peak intersection
 - **deepTools** (bigwigCompare, multiBigwigSummary, plotCorrelation, computeMatrix, plotProfile, multiBigWigSummary)
 - **MACS2** - peak calling.
-- **SeqMonk** - track visualization.
+- **SeqMonk/IGV** - track visualization.
 - **R/Bioconductor** - extraction of genomic coordinates and plotting.
 - **GraphPad Prism** - graph generation.
 - **Adobe Illustrator** - figure polishing.
@@ -66,8 +66,8 @@ Through CRISPR/Cas9 screens, we identified the previously uncharacterized protei
 Quality assessment performed on pre-processed BAM files (after adapter trimming, quality filtering, and duplicate removal) showed exceptionally high alignment rates, with 100% of reads mapped and properly paired. No duplicates or secondary alignments were detected, confirming the efficacy of the preprocessing steps and the high quality of the final dataset for analysis.
 2) **Fragment size distribution analysis**
 Fragment size distribution analysis revealed a predominant enrichment of short DNA fragments, mostly between 30 and 150 bp, consistent with the expected cleavage pattern in CUT&RUN assays. The presence of a strong peak around 50-60 bp suggests efficient targeting of sub-nucleosomal regions, supporting the high specificity and quality of the sample preparation.
-3) **SeqMonk visualization**
-Initial assessment of mapped reads in SeqMonk provided a quick quality check and overview of the data distribution across the genome, confirming CRAMP1´s DNA-binding and enrichment at histone locus bodies.
+3) **SeqMonk/IGV visualization**
+Initial assessment of mapped reads in SeqMonk provided a quick quality check and overview of the data distribution across the genome, confirming CRAMP1´s DNA-binding and enrichment at histone locus bodies. This enrichment was abolished in the D1 mutant and, while still able to accumulate at this genomics regions, the SANT mutant was absent from H1 promoter [Figure 1](./graphs/graphs/CRAMP1_tracks.pdf)
 4) **Correlation analysis**
 Spearman correlation was applied to all replicates. The different replicates of each individual sample showed high correlation (>0.65), while demonstrating big differences between the different conditions, spacially for the D1 mutant.
 5) **Assessment of differences between WT and mutants**
